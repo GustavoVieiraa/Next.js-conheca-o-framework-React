@@ -9,8 +9,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        <Aside />
-        {children}
+        <div className='app-container'>
+          <Aside />
+          {children}
+        </div>
       </body>
     </html>
   );
