@@ -39,5 +39,5 @@
 <br>
 <div align="center">
   <h1>🐱‍🏍 Code Connect (Projeto):</h1>
-  <img src="">
+  <img src="https://raw.githubusercontent.com/GustavoVieiraa/Next.js-conheca-o-framework-React/refs/heads/main/code-connect/public/ProjetoCode%20Connect.gif">
 </div>
