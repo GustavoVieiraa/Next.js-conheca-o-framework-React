@@ -1,12 +1,15 @@
 import { CardPost } from "@/components/CardPost";
+import logger from "@/logger";
 
 async function getAllPosts () {
   const response = await fetch('http://localhost:3042/posts')
 
   if (!response.ok) {
-    console.log("Droga, algo deu erro.")
+    logger.error("Droga, algo deu erro.")
+    return []
   }
 
+  logger.info('Posts obtidos com sucesso!')
   return response.json();
 }
 
