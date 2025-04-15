@@ -4,8 +4,8 @@ import logger from "@/logger";
 
 import S from "./page.module.css";
 
-async function getAllPosts () {
-  const response = await fetch('http://localhost:3042/posts')
+async function getAllPosts (page) {
+  const response = await fetch(`http://localhost:3042/posts?_page=${page}&_per_page=6`)
 
   if (!response.ok) {
     logger.error("Droga, algo deu erro.")
@@ -18,11 +18,11 @@ async function getAllPosts () {
 
 export default async function Home() {
 
-  const posts = await getAllPosts();
+  const { data: posts } = await getAllPosts(1);
 
   return (
     <main className={S.grid}>
-      {posts.map(post => <CardPost post={post} />)}
+      {posts.map(post => <CardPost key={post.id} post={post} />)}
     </main>
   );
 }
