@@ -17,9 +17,11 @@ async function getAllPosts (page) {
   return response.json();
 }
 
-export default async function Home() {
+export default async function Home( { searchParams } ) {
 
-  const { data: posts, prev, next } = await getAllPosts(1);
+  const currentPage = searchParams?.page || 1;
+
+  const { data: posts, prev, next } = await getAllPosts(currentPage);
 
   return (
     <main className={S.grid}>
