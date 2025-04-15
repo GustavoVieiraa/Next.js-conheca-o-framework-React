@@ -1,8 +1,9 @@
 import Image from "next/image";
+import S from "./avatar.module.css";
 
 export const Avatar = ({ name, imageSrc }) => {
   return (
-    <ul>
+    <ul className={S.avatar}>
       <li>
         <Image
           src={imageSrc}
