@@ -1,5 +1,5 @@
 import Image from "next/image";
-import S from "./asside.module.css";
+import S from "./aside.module.css";
 
 import logo from "./logo.png";
 
